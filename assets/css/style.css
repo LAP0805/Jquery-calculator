@@ -1,0 +1,47 @@
+h1{
+    text-align:center;
+    padding:20px;
+    float:right;
+}
+
+.jumbotron{
+    width:500px;
+    background:#6d73c9;
+    margin:20px;
+    float:left;
+    
+}
+#display {
+    width:400px;
+    height:100px;
+    background:white;
+    border-radius:10px;
+    margin:20px;
+    font-size: 60px;
+    font-family: monospace;
+    text-align:right;
+}
+.number {
+    padding:30px;
+    margin:10px;
+    font-size:30px;
+}
+.operator{
+    padding:20px;
+    margin:10px;
+    font-size:30px;
+
+}
+.bottomRow {
+    width:125px;
+}
+#clear{
+    padding:10px;
+    margin:10px;
+    font-size:10px;
+}
+#equals{
+    padding:20px;
+    margin:10px;
+    font-size:30px;
+}
