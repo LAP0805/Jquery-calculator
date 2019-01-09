@@ -23,6 +23,7 @@ var number = this.value;
      console.log("y=" +y);
      decimalOcc = "";
      
+     
    }
 });
 }
@@ -48,6 +49,7 @@ operatorClick();
 
 
 $("#decimal").on("click", function(){
+  if (x){
   if(!decimalOcc){
   $("#display").append(".");
   decimalOcc = "occupied";
@@ -55,6 +57,7 @@ $("#decimal").on("click", function(){
   else{
     return;
   }
+}
 });
 
 
