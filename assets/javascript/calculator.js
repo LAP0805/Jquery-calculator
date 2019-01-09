@@ -14,14 +14,14 @@ var number = this.value;
     
      $("#display").append(number);
      x = $("#display").text();
-     console.log(x)
+     console.log("x="+ x);
    }
 
    else if (occupied === "occupied"){
    
     $("#display").append(number);
      y =  $("#display").text();
-     console.log(y)
+     console.log("y=" +y);
    }
 });
 }
@@ -46,22 +46,23 @@ operatorClick();
 
 $("#clear").on("click",function(){
   
-  $("#display").empty();
+  $("#display").text("");
   x="";
   y="";
   operator="";
-  occupied= "";
+  occupied="";
   numberClick();
 });
 
 $("#equals").on("click",function(){
-  var a= parseInt(x);
-  var b=parseInt(y);
+  var a = parseFloat(x);
+  var b = parseFloat(y);
+  console.log("x=" +x);
+  console.log("y=" +y);
  if (operator === "+"){
    var total = a + b;
    $("#display").text(total);
    $(".number").off("click")
-
  }
   else if (operator === "-"){
     var total = a - b;
@@ -83,8 +84,10 @@ $("#equals").on("click",function(){
     $("#display").text(total);
     $(".number").off("click")
   }
-  else if (operator === 0 ){
-    return
+  else if (!operator ){
+    $(".number").off("click")
+    return  $("#display").text("Error");
+    
   }
 
   
