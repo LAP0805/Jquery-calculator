@@ -4,24 +4,25 @@ var occupied="";
 var x = "";
 var y = "";
 var operator="";
-
+var decimalOcc="";
 
 
 function numberClick(){
 $(".number").on("click", function(){
 var number = this.value;
    if (!occupied){
-    
      $("#display").append(number);
      x = $("#display").text();
      console.log("x="+ x);
+  
    }
-
    else if (occupied === "occupied"){
    
     $("#display").append(number);
      y =  $("#display").text();
      console.log("y=" +y);
+     decimalOcc = "";
+     
    }
 });
 }
@@ -34,15 +35,29 @@ $(".operator").on("click",function(){
     $("#display").text("");
     operator= operatorVal;
     occupied = "occupied"
+    
     } 
     else {
-        return
+        return;
     }
   }
 });
   
 }
 operatorClick();
+
+
+$("#decimal").on("click", function(){
+  if(!decimalOcc){
+  $("#display").append(".");
+  decimalOcc = "occupied";
+  }
+  else{
+    return;
+  }
+});
+
+
 
 $("#clear").on("click",function(){
   
@@ -52,6 +67,7 @@ $("#clear").on("click",function(){
   operator="";
   occupied="";
   numberClick();
+
 });
 
 $("#equals").on("click",function(){
