@@ -27,9 +27,10 @@ h1{
     font-size:30px;
 }
 .operator{
-    padding:20px;
+    padding: 22px;
     margin:10px;
     font-size:30px;
+    width: 60px;
 
 }
 .bottomRow {
@@ -38,7 +39,8 @@ h1{
 #clear{
     padding:10px;
     margin:10px;
-    font-size:10px;
+    font-size:30px;
+    width:150px;
 }
 #equals{
     padding:20px;
