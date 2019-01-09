@@ -21,7 +21,7 @@ var number = this.value;
     $("#display").append(number);
      y =  $("#display").text();
      console.log("y=" +y);
-     decimalOcc = "";
+     
      
      
    }
@@ -36,7 +36,7 @@ $(".operator").on("click",function(){
     $("#display").text("");
     operator= operatorVal;
     occupied = "occupied"
-    
+    decimalOcc = "";
     } 
     else {
         return;
@@ -49,7 +49,7 @@ operatorClick();
 
 
 $("#decimal").on("click", function(){
-  if (x){
+  
   if(!decimalOcc){
   $("#display").append(".");
   decimalOcc = "occupied";
@@ -57,7 +57,7 @@ $("#decimal").on("click", function(){
   else{
     return;
   }
-}
+
 });
 
 
@@ -70,7 +70,7 @@ $("#clear").on("click",function(){
   operator="";
   occupied="";
   numberClick();
-
+  decimalOcc = "";
 });
 
 $("#equals").on("click",function(){
@@ -80,27 +80,32 @@ $("#equals").on("click",function(){
   console.log("y=" +y);
  if (operator === "+"){
    var total = a + b;
-   $("#display").text(total);
+   var newtotal=( Math.floor(total * 100) / 100 );
+    $("#display").text(newtotal);
    $(".number").off("click")
  }
   else if (operator === "-"){
     var total = a - b;
-    $("#display").text( total);
+    var newtotal=( Math.floor(total * 100) / 100 );
+    $("#display").text(newtotal);
     $(".number").off("click")
   }
   else if (operator === "*"){
     var total = a * b;
-    $("#display").text(total);
+    var newtotal=( Math.floor(total * 100) / 100 );
+    $("#display").text(newtotal);
     $(".number").off("click")
   }
   else if (operator === "/"){
     var total = (a/b);
-    $("#display").text(total);
+    var newtotal=( Math.floor(total * 100) / 100 );
+    $("#display").text(newtotal);
     $(".number").off("click")
   }
   else if (operator === "^"){
     var total = a ** b;
-    $("#display").text(total);
+    var newtotal=( Math.floor(total * 100) / 100 );
+    $("#display").text(newtotal);
     $(".number").off("click")
   }
   else if (!operator ){
